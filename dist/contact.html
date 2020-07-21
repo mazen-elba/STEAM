@@ -77,7 +77,7 @@
         Contact <span class="text-secondary">STEAM</span>
       </h1>
       <h2 class="sm-heading">
-        This is how you can reach us...
+        This is how to reach us, and don't forget to give feedback!
       </h2>
       <div class="boxes">
         <div><span class="text-secondary">Email</span> steam@test.com</div>
@@ -91,173 +91,198 @@
         </div>
       </div>
 
-      <!-- SURVEY FIELD -->
-      <div id="header-field">
-        <h1 id="title">Survey Form</h1>
-        <p id="description"><em>A brief performance feedback</em></p>
-      </div>
+      <!-- SURVEY FORM -->
+      <div class="container">
+        <!-- <header class="header">
+          <h1 id="title" class="text-center">Suggestion Box</h1>
+          <p id="description" class="description text-center">
+            <em>Please take the time to help us improve the platform</em>
+          </p>
+        </header> -->
 
-      <form action="#!" id="survey-form">
-        <div id="name-field">
-          <label for="name" id="name-label">Name</label><br />
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            required
-          /><br />
-        </div>
+        <form id="survey-form">
+          <div class="form-group">
+            <label for="name" id="name-label">Name</label><br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder="Enter your name"
+              required
+            /><br />
+          </div>
 
-        <div id="email-field">
-          <label for="email" id="email-label">Email</label><br />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          /><br />
-        </div>
+          <div class="form-group">
+            <label for="email" id="email-label">Email</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter your email"
+              required
+            /><br />
+          </div>
 
-        <div id="age-field">
-          <label for="number" id="number-label">Age (optional)</label><br />
-          <input
-            type="number"
-            id="number"
-            name="number"
-            min="1"
-            max="999"
-            placeholder="Age"
-          /><br />
-        </div>
+          <div class="form-group">
+            <label for="number" id="number-label"
+              >Age<span class="clue">(optional)</span></label
+            ><br />
+            <input
+              type="number"
+              id="age"
+              name="number"
+              min="10"
+              max="99"
+              class="form-control"
+              placeholder="Age"
+            /><br />
+          </div>
 
-        <!-- dropdown 1 -->
-        <div id="dropdown-options-1">
-          <label for="dropdown"
-            >What option best describes your current role?</label
-          ><br />
-          <select name="dropdown" id="dropdown">
-            <option value="" disabled selected hidden
-              >Select your current role</option
+          <!-- dropdown 1 -->
+          <div class="form-group">
+            <p>Which option describes your current role?</p>
+            <select name="role" id="dropdown" class="form-control" required>
+              <option disabled selected value>Select current role</option>
+              <option value="student">Student</option>
+              <option value="professional-tech"
+                >Professional in STEAM Fields</option
+              >
+              <option value="professional-other"
+                >Professional in Other Fields</option
+              >
+              <option value="no-answer">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <!-- radio buttons -->
+          <div class="form-group">
+            <p>Would you recommend our website to a friend?</p>
+            <label>
+              <input
+                type="radio"
+                class="input-radio"
+                checked
+                name="user-recommend"
+                value="definitely"
+              />Definitely</label
             >
-            <option value="student">Student</option>
-            <option value="job">Full Time Job</option>
-            <option value="learner">Full Time Learner</option>
-            <option value="no-answer">Prefer not to say</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
+            <label>
+              <input
+                type="radio"
+                class="input-radio"
+                checked
+                name="user-recommend"
+                value="maybe"
+              />Maybe</label
+            >
+            <label>
+              <input
+                type="radio"
+                class="input-radio"
+                checked
+                name="user-recommend"
+                value="not-sure"
+              />Not sure</label
+            >
+          </div>
 
-        <!-- radio buttons -->
-        <div id="radio-btns">
-          <label>Would you recommend my services to a friend?</label><br />
-          <input
-            type="radio"
-            id="definitely"
-            name="recommendation"
-            value="definitely"
-          />
-          <label for="definitely">Definitely</label><br />
-          <input type="radio" id="maybe" name="recommendation" value="maybe" />
-          <label for="maybe">Maybe</label><br />
-          <input
-            type="radio"
-            id="note-sure"
-            name="recommendation"
-            value="other"
-          />
-          <label for="not-sure">Not sure</label>
-        </div>
+          <!-- dropdown 2 -->
+          <div class="form-group">
+            <p>What is your favorite feature of STEAM?</p>
+            <select
+              name="mostlike"
+              id="most-like"
+              class="form-control"
+              required
+            >
+              <option disabled selected value>Select an option</option>
+              <option value="history">Historical Relevance</option>
+              <option value="biography">Biography</option>
+              <option value="community">Community Reach</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
 
-        <!-- dropdown 2 -->
-        <div id="dropdown-options-2">
-          <label for="dropdown"
-            >What is your favorite feature of freeCodeBootcamp?</label
-          ><br />
-          <select name="dropdown" id="dropdown">
-            <option value="" disabled selected hidden>Select an option</option>
-            <option value="challenges">Challenges</option>
-            <option value="projects">Projects</option>
-            <option value="community">Community</option>
-            <option value="open-source">Open Source</option>
-          </select>
-        </div>
+          <!-- checkboxes -->
+          <div class="form-group">
+            <p>
+              What would you like to see improved?
+              <span class="clue">(check all that applies)</span>
+            </p>
 
-        <!-- checkboxes -->
-        <div id="checkboxes">
-          <label
-            >What would you like to see improved? (check all that
-            applies)</label
-          ><br />
-          <input
-            type="checkbox"
-            id="option1"
-            name="option1"
-            value="front-end"
-          />
-          <label for="option1">Front-end Projects</label><br />
-          <input type="checkbox" id="option2" name="option2" value="back-end" />
-          <label for="option2">Back-end Projects</label><br />
-          <input
-            type="checkbox"
-            id="option3"
-            name="option3"
-            value="data-visualization"
-          />
-          <label for="option3">Data Visualization</label><br />
-          <input
-            type="checkbox"
-            id="option4"
-            name="option4"
-            value="challenges"
-          />
-          <label for="option4">Challenges</label><br />
-          <input
-            type="checkbox"
-            id="option5"
-            name="option5"
-            value="open-source"
-          />
-          <label for="option5">Open Source Community</label><br />
-          <input
-            type="checkbox"
-            id="option6"
-            name="option6"
-            value="help-rooms"
-          />
-          <label for="option6">Help rooms</label><br />
-          <input type="checkbox" id="option7" name="option7" value="meetups" />
-          <label for="option7">City Meetups</label><br />
-          <input type="checkbox" id="option8" name="option8" value="forums" />
-          <label for="option8">Forums</label><br />
-          <input
-            type="checkbox"
-            id="option9"
-            name="option9"
-            value="additional-courses"
-          />
-          <label for="option9">Additional Courses</label><br />
-        </div>
+            <label>
+              <input
+                type="checkbox"
+                class="input-checkbox"
+                name="prefer"
+                value="science-content"
+              />Content</label
+            >
 
-        <!-- additional information -->
-        <div id="comments-suggestions">
-          <label for="additional-comments">Any comments or suggestions?</label
-          ><br />
-          <textarea
-            id="additional-comments"
-            name="additional-comments"
-            row="4"
-            col="50"
-            placeholder="Enter your comments here..."
-          ></textarea>
-        </div>
+            <label>
+              <input
+                type="checkbox"
+                class="input-checkbox"
+                name="prefer"
+                value="community"
+              />Community Outreach</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                class="input-checkbox"
+                name="prefer"
+                value="data-visualization"
+              />Data Visualization</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                class="input-checkbox"
+                name="prefer"
+                value="biographies"
+              />Biography Interface</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                class="input-checkbox"
+                name="prefer"
+                value="resources"
+              />Resource Contributions</label
+            >
+            <label>
+              <input
+                type="checkbox"
+                class="input-checkbox"
+                name="prefer"
+                value="other"
+              />Other</label
+            >
+          </div>
 
-        <!-- submit survey -->
-        <div id="survey-btn">
-          <input type="submit" id="submit" value="Submit" />
-        </div>
-      </form>
+          <!-- additional information -->
+          <div class="form-group">
+            <p>Any comments or suggestions?</p>
+            <textarea
+              id="comments"
+              class="input-textarea"
+              name="comment"
+              placeholder="Enter your comments here..."
+            ></textarea>
+          </div>
+
+          <!-- submit survey -->
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </main>
 
     <footer id="main-footer">
