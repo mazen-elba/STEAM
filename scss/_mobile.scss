@@ -31,7 +31,7 @@
     min-height: 0;
 
     &.show {
-      transform: translate3d(0, 0, 0);
+      transform: traslate3d(0, 0, 0);
     }
   }
 
@@ -46,9 +46,11 @@
     transform: translate3d(100%, 0, 0);
 
     .portrait {
-      background: url(../img/sm-globe.jpg);
       width: 150px;
       height: 150px;
+      background: $home-image;
+      background-size: contain;
+      background-position: center 0.7rem;
     }
   }
 
@@ -68,7 +70,7 @@
   }
 
   .container {
-    max-width: 720;
+    width: 50rem;
   }
 }
 
@@ -82,8 +84,9 @@
     grid-template-columns: 1fr;
   }
 
-  .container {
-    max-width: 540;
+  .survey-container {
+    // max-width: 540;
+    width: 25rem;
   }
 
   form {

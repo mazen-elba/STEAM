@@ -30,7 +30,7 @@
       }
       // Line 3 - Rotate
       &:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: rotate(-45deg) translate(6px, -6px);
       }
     }
   }
@@ -41,7 +41,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.8;
   visibility: hidden;
 
   &.show {
@@ -77,8 +77,8 @@
   // Branding Side
   &-branding {
     background: $primary-color;
-    @include easeOut;
     transform: translate3d(0, 100%, 0); // comes-in from bottom
+    @include easeOut;
 
     &.show {
       // Slide in from bottom
@@ -88,7 +88,9 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background: url(../img/lg-globe.jpg);
+      background: $home-image;
+      background-size: contain;
+      background-position: center 0.7rem;
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }
